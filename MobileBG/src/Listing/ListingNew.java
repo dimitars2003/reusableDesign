@@ -1,19 +1,26 @@
 package Listing;
 
 import Product.Vehicles.RoadVehicles.Car;
+import Product.Vehicles.RoadVehicles.CarNew;
 
 public class ListingNew {
 	private String title;
     private int price;
-    private Car car;
+    private CarNew car;
 
-    public ListingNew(String title, int price, Car car) {
+    public ListingNew(String title, int price, CarNew car) {
         this.title = title;
         this.price = price;
         this.car = car;
     }
 
-    public String getTitle() {
+    public ListingNew(CarNew carNew, int i) {
+		this.title = "";
+		this.car = carNew;
+		this.price = i;
+	}
+
+	public String getTitle() {
         return title;
     }
 
@@ -29,11 +36,11 @@ public class ListingNew {
         this.price = price;
     }
 
-    public Car getCar() {
+    public CarNew getCar() {
         return car;
     }
 
-    public void setCar(Car car) {
+    public void setCar(CarNew car) {
         this.car = car;
     }
 }
