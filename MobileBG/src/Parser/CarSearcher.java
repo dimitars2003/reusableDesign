@@ -53,7 +53,7 @@ public class CarSearcher implements Searcher{
 	            } else if ("year".equals(attribute) && Integer.toString(car.getYear()).equals(value)) {
 	                result.add(listing);
 	            }
-	            // Add other attributes as needed
+	            
 	        }
 	        return result;
 	    }
