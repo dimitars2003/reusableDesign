@@ -1,15 +1,14 @@
 package Product.Vehicles;
 
 import Product.Product;
-import Product.Enums.Brand;
-import Product.Enums.Model;
+
 
 public class RoadVehicle extends Product{
-	protected Brand brand;
-    protected Model model;
+	protected String brand;
+    protected String model;
     protected Integer year;
     
-    public RoadVehicle(Double price, Brand brand, Model model,
+    public RoadVehicle(Double price, String brand, String model,
                               Integer year)
     {
         super(price);
@@ -19,12 +18,12 @@ public class RoadVehicle extends Product{
         this.year = year;
     }
 
-    public Brand getBrand()
+    public String getBrand()
     {
         return brand;
     }
 
-    public Model getModel()
+    public String getModel()
     {
         return model;
     }

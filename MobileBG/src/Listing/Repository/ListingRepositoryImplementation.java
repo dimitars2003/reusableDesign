@@ -5,7 +5,7 @@ import java.util.List;
 
 import Listing.Listing;
 
-public class ListingServiceImplementation implements ListingRepository
+public class ListingRepositoryImplementation implements ListingRepository
 {
     private final List<Listing> listings = new ArrayList<>();
 
@@ -37,5 +37,16 @@ public class ListingServiceImplementation implements ListingRepository
     {
         return new ArrayList<>(listings);
     }
+
+	@Override
+	public List<Listing> getAllByUser(String id) {
+		List<Listing> byUser = new ArrayList<Listing>();
+		for(int i = 0; i < listings.size();i++) {
+			if(listings.get(i).getOwnerId().equals(id)) {
+				byUser.add(listings.get(i));
+			}
+		}
+		return byUser;
+	}
 
 }

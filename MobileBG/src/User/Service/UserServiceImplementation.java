@@ -35,4 +35,9 @@ public class UserServiceImplementation implements UserService
         return userRepository.findById(id);
     }
 
+	@Override
+	public UserBase isUserFound(String username, String password, String type) {
+		return userRepository.findByUserName(username,password,type);
+	}
+
 }

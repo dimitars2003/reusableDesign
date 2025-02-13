@@ -1,6 +1,5 @@
 package Listing;
 
-import Product.Vehicles.RoadVehicles.Car;
 import Product.Vehicles.RoadVehicles.CarNew;
 
 public class ListingNew {
@@ -43,4 +42,6 @@ public class ListingNew {
     public void setCar(CarNew car) {
         this.car = car;
     }
+    
+    
 }

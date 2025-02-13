@@ -10,4 +10,5 @@ public interface ListingRepository
     void deleteById(String id);
     Listing findById(String id);
     List<Listing> findAll();
+    List<Listing> getAllByUser(String id);
 }

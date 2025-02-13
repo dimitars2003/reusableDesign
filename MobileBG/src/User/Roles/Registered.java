@@ -39,4 +39,18 @@ public class Registered extends UserBase{
     {
         return this.phoneNumber;
     }
+
+	@Override
+	public boolean isUser(String username, String password) {
+		if(this.userName.equals(username) && this.password.equals(password)) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return "Registered";
+	}
 }

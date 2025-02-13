@@ -47,7 +47,7 @@ public class CarNew {
 
 	public int getYear() {
 		// TODO Auto-generated method stub
-		return 0;
+		return year;
 	}
 
 }

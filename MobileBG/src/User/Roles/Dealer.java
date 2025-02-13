@@ -54,4 +54,17 @@ public class Dealer extends UserBase
     {
         return this.region;
     }
+
+	@Override
+	public boolean isUser(String username, String password) {
+		if(this.userName.equals(username) && this.password.equals(password)) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public String getType() {
+		return "Dealer";
+	}
 }

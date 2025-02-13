@@ -4,32 +4,47 @@ import Additional.Region;
 import Product.Product;
 
 
-public record Listing
-(
-        String id,
+public class Listing {
 
-        Product product,
-        Region region,
+        String id;
 
-        String ownerId,
-        String expiryDate,
+        Product product;
+        Region region;
+        
+        String ownerId;
+        String expiryDate;
 
-        Boolean isVip,
-        String description,
+        boolean isVip;
+        String description;
 
-        Boolean isService
-)
-{
+        boolean isService;
+
+
 public Listing(String id, Product product, Region region, String ownerId, String expiryDate,
            Boolean isVip, String description)
 {
-this(id, product, region, ownerId, expiryDate, isVip, description, false);
+	this.id = id;
+	this.product = product;
+	this.region = region;
+	this.ownerId = ownerId;
+	this.expiryDate = expiryDate;
+	this.isVip = isVip;
+	this.description = description;
+	this.isService = false;
 }
 
 public Listing(String id, Region region, String ownerId, String expiryDate, Boolean isVip,
            String description)
 {
-this(id, null, region, ownerId, expiryDate, isVip, description, true);
+	this.id = id;
+	this.product = null;
+	this.region = region;
+	this.ownerId = ownerId;
+	this.expiryDate = expiryDate;
+	this.isVip = isVip;
+	this.description = description;
+	this.isService = true;
+	
 }
 
 public String getId()
@@ -70,5 +85,7 @@ return this.description;
 public Boolean getIsService() {
 return this.isService;
 }
-
+public void setVip(boolean add) {
+	isVip = add;
+}
 }

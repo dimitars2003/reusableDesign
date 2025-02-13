@@ -1,13 +1,13 @@
 package Product.Bicycle;
 
 import Product.Product;
-import Product.Enums.Brand;
+
 
 public class Bicycle extends Product{
-	private Brand brand;
+	private String brand;
    
 
-    public Bicycle(Double price, Brand brand)
+    public Bicycle(Double price, String brand)
     {
         super(price);
         this.setBrand(brand);
@@ -15,12 +15,12 @@ public class Bicycle extends Product{
     }
 
 
-	public Brand getBrand() {
+	public String getBrand() {
 		return brand;
 	}
 
 
-	public void setBrand(Brand brand) {
+	public void setBrand(String brand) {
 		this.brand = brand;
 	}
 }

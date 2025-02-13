@@ -1,11 +1,10 @@
 package Product.Vehicles.RoadVehicles;
 
-import Product.Enums.Brand;
-import Product.Enums.Model;
+
 import Product.Vehicles.RoadVehicle;
 
 public class Car extends RoadVehicle{
-	 public Car(Double price, Brand brand, Model model, Integer year)
+	 public Car(Double price, String brand, String model, Integer year)
   {
       super(price, brand, model, year);
   }

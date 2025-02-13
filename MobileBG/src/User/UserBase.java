@@ -13,4 +13,7 @@ public abstract class UserBase
     {
         return this.id;
     }
+    
+    public abstract boolean isUser(String username, String password);
+    public abstract String getType();
 }
